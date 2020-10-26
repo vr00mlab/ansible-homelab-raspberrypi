@@ -1,1 +1,3 @@
 ---
+- include_tasks: disable-swap.yml
+  when: rpi_swap == "disable"
