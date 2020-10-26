@@ -1,0 +1,20 @@
+galaxy_info:
+  author: Hoang-Thanh VO
+  description: Configures a Raspberry Pi device
+  company: none
+
+  license: license (MIT)
+
+  min_ansible_version: 2.1
+
+  platforms:
+  - name: Debian
+    versions:
+      - buster
+
+  galaxy_tags: 
+    - raspberrypi
+    - system
+    - linux
+
+dependencies: []

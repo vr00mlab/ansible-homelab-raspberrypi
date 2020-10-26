@@ -1,0 +1,3 @@
+# Ansible role for Raspberry Pi
+
+Work in progress...
