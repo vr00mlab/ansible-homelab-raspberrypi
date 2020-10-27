@@ -2,11 +2,11 @@
 - name: SWAP | Check if swap file exists
   stat:
     path: "{{ rpi_swap_filepath }}"
-  register: stat_result
+  register: result
 
 - name: SWAP | Unmount swap file
   command: dphys-swapfile swapoff && dphys-swapfile uninstall
-  when: stat_result.exists
+  when: result.stat.exists
 
 - name: SWAP | Stop and disable dphys-swapfile service
   service:
