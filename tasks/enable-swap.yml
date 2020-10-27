@@ -1,0 +1,14 @@
+---
+- name: SWAP | Check if swap file does not exist
+  stat:
+    path: "{{ rpi_swap_filepath }}"
+  register: result
+
+- name: SWAP | Mount swap file
+  command: dphys-swapfile setup && dphys-swapfile swapon
+
+- name: SWAP | Start and enable dphys-swapfile service
+  service:
+    name: dphys-swapfile
+    state: started
+    enabled: yes
