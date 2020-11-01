@@ -4,3 +4,6 @@
 
 - include_tasks: enable-swap.yml
   when: rpi_swap == "enable"
+
+- include_tasks: disable-bluetooth.yml
+  when: rpi_bt == "disable"
