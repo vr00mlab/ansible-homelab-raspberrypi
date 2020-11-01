@@ -1,3 +1,5 @@
 ---
 rpi_swap: disable
 rpi_swap_filepath: /var/swap
+
+rpi_bt: disable

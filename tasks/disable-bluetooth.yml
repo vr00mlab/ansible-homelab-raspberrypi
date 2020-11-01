@@ -1,0 +1,6 @@
+---
+- name: DEVICE | Disable bluetooth module
+  lineinfile:
+    path: /boot/config.txt
+    line: 'dtoverlay=disable-bt'
+    insertafter: '\[all\]'
