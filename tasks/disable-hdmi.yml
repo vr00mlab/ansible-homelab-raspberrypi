@@ -1,0 +1,3 @@
+---
+- name: DEVICE | Check HDMI port status
+  command: /opt/vc/bin/tvservice -s
