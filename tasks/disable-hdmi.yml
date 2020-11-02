@@ -1,3 +1,6 @@
 ---
-- name: DEVICE | Check HDMI port status
-  command: /opt/vc/bin/tvservice -s
+- name: DEVICE | Disable HDMI port
+  lineinfile:
+    path: /boot/config.txt
+    line: 'hdmi_blanking=2'
+    insertafter: '\[all\]'
