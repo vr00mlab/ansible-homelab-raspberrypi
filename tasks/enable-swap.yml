@@ -6,6 +6,7 @@
 
 - name: SWAP | Mount swap file
   command: dphys-swapfile setup && dphys-swapfile swapon
+  when: not result.stat.exists
 
 - name: SWAP | Start and enable dphys-swapfile service
   service:
