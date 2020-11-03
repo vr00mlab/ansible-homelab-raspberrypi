@@ -1,4 +1,6 @@
 ---
+- include_tasks: enable-cgroups.yml
+
 - include_tasks: disable-swap.yml
   when: rpi_swap == "disable"
 
