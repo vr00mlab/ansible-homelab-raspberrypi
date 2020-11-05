@@ -1,14 +1,17 @@
 ---
 - include_tasks: enable-cgroups.yml
 
-- include_tasks: disable-swap.yml
-  when: rpi_swap == "disable"
-
-- include_tasks: enable-swap.yml
-  when: rpi_swap == "enable"
-
 - include_tasks: disable-bluetooth.yml
   when: rpi_bt == "disable"
 
 - include_tasks: disable-hdmi.yml
   when: rpi_hdmi == "disable"
+
+- include_tasks: update-gpu.yml
+  when: rpi_gpu_mem is defined
+
+- include_tasks: disable-swap.yml
+  when: rpi_swap == "disable"
+
+- include_tasks: enable-swap.yml
+  when: rpi_swap == "enable"

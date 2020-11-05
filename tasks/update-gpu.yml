@@ -1,0 +1,7 @@
+---
+- name: DEVICE | Set GPU memory split
+  lineinfile:
+    path: /boot/config.txt
+    line: "gpu_mem={{ rpi_gpu_mem }}"
+    insertafter: '\[all\]'
+  when: rpi_gpu_mem is number

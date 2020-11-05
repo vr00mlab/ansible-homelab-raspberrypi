@@ -4,3 +4,5 @@ rpi_swap_filepath: /var/swap
 
 rpi_bt: disable
 rpi_hdmi: disable
+
+rpi_gpu_mem: 16
