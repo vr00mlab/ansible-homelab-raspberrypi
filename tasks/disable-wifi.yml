@@ -1,0 +1,6 @@
+---
+- name: DEVICE | Disable Wi-Fi module
+  lineinfile:
+    path: /boot/config.txt
+    line: 'dtoverlay=disable-wifi'
+    insertafter: '\[all\]'

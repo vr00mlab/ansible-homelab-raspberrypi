@@ -4,6 +4,9 @@
 - include_tasks: disable-bluetooth.yml
   when: rpi_bt == "disable"
 
+- include_tasks: disable-wifi.yml
+  when: rpi_wifi == "disable"
+
 - include_tasks: disable-hdmi.yml
   when: rpi_hdmi == "disable"
 
